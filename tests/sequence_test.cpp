@@ -17,20 +17,90 @@ TEST_CASE( "nativeSequence computes correctly" ) {
     REQUIRE(nativeSequence(9) == 6);
 }
 
-// TEST_CASE("benchmarking the factorial function") {
-//     BENCHMARK("factorial(20)") {
-//         return factorial(20);
-//     };
+TEST_CASE( "optimizedSequence computes correctly" ) {
+    REQUIRE(optimizedSequence(1) == 1);
+    REQUIRE(optimizedSequence(2) == 1);
+    REQUIRE(optimizedSequence(3) == 2);
+    REQUIRE(optimizedSequence(4) == 3);
+    REQUIRE(optimizedSequence(5) == 3);
+    REQUIRE(optimizedSequence(6) == 4);
+    REQUIRE(optimizedSequence(7) == 4);
+    REQUIRE(optimizedSequence(8) == 5);
+    REQUIRE(optimizedSequence(9) == 6);
+}
 
-//     BENCHMARK("factorial(25)") {
-//         return factorial(25);
-//     };
+TEST_CASE("benchmarking the nativeSequence function") {
+    BENCHMARK("nativeSequence(0)") {
+        return nativeSequence(0);
+    };
 
-//     BENCHMARK("factorial(30)") {
-//         return factorial(30);
-//     };
+    BENCHMARK("nativeSequence(2)") {
+        return nativeSequence(2);
+    };
 
-//     BENCHMARK("factorial(35)") {
-//         return factorial(35);
-//     };
-// }
+    BENCHMARK("nativeSequence(4)") {
+        return nativeSequence(4);
+    };
+
+    BENCHMARK("nativeSequence(8)") {
+        return nativeSequence(8);
+    };
+
+    BENCHMARK("nativeSequence(16)") {
+        return nativeSequence(16);
+    };
+
+    BENCHMARK("nativeSequence(32)") {
+        return nativeSequence(32);
+    };
+
+    BENCHMARK("nativeSequence(64)") {
+        return nativeSequence(64);
+    };
+
+    BENCHMARK("nativeSequence(128)") {
+        return nativeSequence(128);
+    };
+
+    BENCHMARK("nativeSequence(256)") {
+        return nativeSequence(256);
+    };
+}
+
+TEST_CASE("benchmarking the optimizedSequence function") {
+    BENCHMARK("optimizedSequence(0)") {
+        return optimizedSequence(0);
+    };
+
+    BENCHMARK("optimizedSequence(2)") {
+        return optimizedSequence(2);
+    };
+
+    BENCHMARK("optimizedSequence(4)") {
+        return optimizedSequence(4);
+    };
+
+    BENCHMARK("optimizedSequence(8)") {
+        return optimizedSequence(8);
+    };
+
+    BENCHMARK("optimizedSequence(16)") {
+        return optimizedSequence(16);
+    };
+
+    BENCHMARK("optimizedSequence(32)") {
+        return optimizedSequence(32);
+    };
+
+    BENCHMARK("optimizedSequence(64)") {
+        return optimizedSequence(64);
+    };
+
+    BENCHMARK("optimizedSequence(128)") {
+        return optimizedSequence(128);
+    };
+
+    BENCHMARK("optimizedSequence(256)") {
+        return optimizedSequence(256);
+    };
+}
