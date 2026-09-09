@@ -7,7 +7,7 @@ int nativeSequence(int n) {
     return n - nativeSequence((nativeSequence(n - 1)));
 }
 
-int optimizedSequence(int n, std::vector<int>& arr {
+int optimizedSequence(int n, std::vector<int>& arr) {
     if (n <= 0) {
         return 0;
     }
