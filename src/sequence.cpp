@@ -1,10 +1,10 @@
 #include <vector>
 
-int nativeSequence(int n) {
+int naiveSequence(int n) {
     if (n <= 0) {
         return 0;
     }
-    return n - nativeSequence((nativeSequence(n - 1)));
+    return n - naiveSequence((naiveSequence(n - 1)));
 }
 
 int optimizedSequence(int n, std::vector<int>& arr) {

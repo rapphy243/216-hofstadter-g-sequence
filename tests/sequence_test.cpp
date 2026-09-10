@@ -5,16 +5,16 @@
 
 #include "../src/sequence.hpp"
 
-TEST_CASE( "nativeSequence computes correctly" ) {
-    REQUIRE(nativeSequence(1) == 1);
-    REQUIRE(nativeSequence(2) == 1);
-    REQUIRE(nativeSequence(3) == 2);
-    REQUIRE(nativeSequence(4) == 3);
-    REQUIRE(nativeSequence(5) == 3);
-    REQUIRE(nativeSequence(6) == 4);
-    REQUIRE(nativeSequence(7) == 4);
-    REQUIRE(nativeSequence(8) == 5);
-    REQUIRE(nativeSequence(9) == 6);
+TEST_CASE( "naiveSequence computes correctly" ) {
+    REQUIRE(naiveSequence(1) == 1);
+    REQUIRE(naiveSequence(2) == 1);
+    REQUIRE(naiveSequence(3) == 2);
+    REQUIRE(naiveSequence(4) == 3);
+    REQUIRE(naiveSequence(5) == 3);
+    REQUIRE(naiveSequence(6) == 4);
+    REQUIRE(naiveSequence(7) == 4);
+    REQUIRE(naiveSequence(8) == 5);
+    REQUIRE(naiveSequence(9) == 6);
 }
 
 TEST_CASE( "optimizedSequence computes correctly" ) {
@@ -29,41 +29,41 @@ TEST_CASE( "optimizedSequence computes correctly" ) {
     REQUIRE(optimizedSequence(9) == 6);
 }
 
-TEST_CASE("benchmarking the nativeSequence function") {
-    BENCHMARK("nativeSequence(0)") {
-        return nativeSequence(0);
+TEST_CASE("benchmarking the naiveSequence function") {
+    BENCHMARK("naiveSequence(0)") {
+        return naiveSequence(0);
     };
 
-    BENCHMARK("nativeSequence(2)") {
-        return nativeSequence(2);
+    BENCHMARK("naiveSequence(2)") {
+        return naiveSequence(2);
     };
 
-    BENCHMARK("nativeSequence(4)") {
-        return nativeSequence(4);
+    BENCHMARK("naiveSequence(4)") {
+        return naiveSequence(4);
     };
 
-    BENCHMARK("nativeSequence(8)") {
-        return nativeSequence(8);
+    BENCHMARK("naiveSequence(8)") {
+        return naiveSequence(8);
     };
 
-    BENCHMARK("nativeSequence(16)") {
-        return nativeSequence(16);
+    BENCHMARK("naiveSequence(16)") {
+        return naiveSequence(16);
     };
 
-    BENCHMARK("nativeSequence(32)") {
-        return nativeSequence(32);
+    BENCHMARK("naiveSequence(32)") {
+        return naiveSequence(32);
     };
 
-    BENCHMARK("nativeSequence(64)") {
-        return nativeSequence(64);
+    BENCHMARK("naiveSequence(64)") {
+        return naiveSequence(64);
     };
 
-    BENCHMARK("nativeSequence(128)") {
-        return nativeSequence(128);
+    BENCHMARK("naiveSequence(128)") {
+        return naiveSequence(128);
     };
 
-    BENCHMARK("nativeSequence(256)") {
-        return nativeSequence(256);
+    BENCHMARK("naiveSequence(256)") {
+        return naiveSequence(256);
     };
 }
 
